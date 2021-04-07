@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		$(window).scroll(testScroll);
+var viewed = false;
+
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+function testScroll() {
+  if (isScrolledIntoView($(".numbers")) && !viewed) {
+      viewed = true;
+      $('.value').each(function () {
+      $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+      }, {
+          duration: 4000,
+          easing: 'swing',
+          step: function (now) {
+              $(this).text(Math.ceil(now));
+          }
+      });
+    });
+  }
+}
+  	})
+  </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	.number-item{
+		width: 33.33%;
+		float: left;
+		font-size: 2em;
+		text-align: center;
+	}
+</style>
+<body>
+	<div style="font-size: 3em">Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Modi alias, iste quasi eaque vero id eos provident quam fugit similique expedita unde, a esse quaerat? Sapiente, possimus doloribus doloremque voluptatem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis deleniti reiciendis numquam ratione aliquam magnam tempora distinctio consequatur repellat neque, nemo, iusto doloremque, corporis, fuga accusamus officiis molestias. Tempora, architecto.1 Lorem ipsum dolor, sit amet, consectetur adipisicing elit. Beatae inventore harum molestias necessitatibus assumenda culpa, magnam libero nostrum nulla saepe, cum dolor ipsam. Illo delectus a repudiandae, sint, atque ab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt explicabo voluptate cum officia similique, veritatis maiores. Quidem numquam ea fuga nihil ducimus officia quod provident, nobis tempora cupiditate, nostrum sint? Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Odio, eos debitis, doloribus fugiat optio magni est ex quisquam blanditiis deleniti hic error suscipit voluptate itaque vitae eligendi, animi libero officia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur est atque tenetur dolorum nesciunt, sunt iure id libero sapiente animi quibusdam, ex quia ipsa, voluptatum facere nemo rerum! Enim, sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, saepe quo molestias aut in? Perferendis nihil magni doloremque saepe, excepturi iusto sapiente incidunt cupiditate delectus dolorem atque ullam, quo laudantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quibusdam reiciendis doloribus perferendis veritatis. Aliquid, odio, atque! Earum veritatis culpa, atque, numquam blanditiis nesciunt doloremque nostrum perferendis, voluptate fugit, modi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti tempore soluta ab quo aperiam. Iure rem illum iusto adipisci quidem nulla, at modi eaque, dicta vel quae harum, aperiam numquam. </div>
+	<div class="numbers">
+	<div class="number-item">
+		<h2><span class="value">100</span></h2>
+		<h6>Company</h6>
+	</div>
+
+	<div class="number-item">
+		<h2><span class="value">50000</span></h2>
+		<h6>Client</h6>
+	</div>
+
+	<div class="number-item">
+		<h2><span class="value">3000</span></h2>
+		<h6>Staff</h6>
+	</div>
+</div>
+</body>
+</html>
