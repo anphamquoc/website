@@ -4,6 +4,9 @@
 	<title>Web</title>
 </head>
 <style type="text/css">
+	body{
+		background-color: #08001b;
+	}
 	*{
 		margin: 0;
 		padding: 0;
@@ -50,6 +53,15 @@
 		width: 50%;
 		background: rgba(255,255,255, 0.1);
 		pointer-events: none;
+	}
+
+	.container .card{
+		opacity: 0.4;
+		transition: 0.5s;
+	}
+
+	.container .card:hover{
+		opacity: 1;
 	}
 
 	.container .card .content{
@@ -120,7 +132,7 @@
 		width: 100%;
 		height: 3px;
 		background: linear-gradient(to right, transparent, #1779ff);
-		animation: animate1 1s linear infinite;
+		animation: animate1 2s linear infinite;
 	}
 
 	.container .card span:nth-child(2){
@@ -130,8 +142,9 @@
 		width: 3px;
 		height: 100%; 
 		background: linear-gradient(to bottom, transparent, #1779ff);
-		animation: animate2 1s linear infinite;
-		animation-delay: 0.5s;
+		animation: animate2 2s linear infinite;
+		animation-delay: 1s;
+		transform: translateY(-100%);
 	}
 
 	.container .card span:nth-child(3){
@@ -141,7 +154,7 @@
 		width: 100%;
 		height: 3px;
 		background: linear-gradient(to left, transparent, #1779ff);
-		animation: animate3 1s linear infinite;
+		animation: animate3 2s linear infinite;
 	}
 
 	.container .card span:nth-child(4){
@@ -151,8 +164,9 @@
 		width: 3px;
 		height: 100%;
 		background: linear-gradient(to top, transparent, #1779ff);
-		animation: animate4 1s linear infinite;
-		animation-delay: 0.5s;
+		animation: animate4 2s linear infinite;
+		animation-delay: 1s;
+		transform: translateY(100%);
 	}
 
 	@keyframes animate1 {
