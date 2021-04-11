@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<title>Document</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 350px;
+      min-height: 350px;
+      margin: 0 20px;
+    }
+
+    body{
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	min-height: 100vh;
+    	background: #111;
+    }
+
+    .testimonials{
+    	position: relative;
+    	max-width: 100%;
+    	-webkit-box-reflect: below 1px linear-gradient(transparent 70%, #0009);
+    }
+
+    .testimonials .card{
+    	position: relative;
+    	width: 100%;
+    	margin: 0 auto;
+    	background: #333;
+    	padding: 60px 40px;
+    	text-align: center;
+    	overflow: hidden;
+    }
+
+    .testimonials .card .content{
+    	position: relative;
+    	z-index: 2;
+    }
+
+    .testimonials .card .content p{
+    	font-size: 18px;
+    	line-height: 24px;
+    	margin-bottom: 20px;
+    	color: #fff;
+    }
+
+    .swiper-container-3d .swiper-slide-shadow-left, .swiper-container-3d .swiper-slide-shadow-right {
+    background-image: none;
+}
+
+.testimonials .card .layer{
+	position: absolute;
+	top: calc(100% - 2px);
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#03a9f4, #e91e63);
+	z-index: 1;
+	transition: 0.5s;
+}
+
+.testimonials .card:hover .layer{
+	top: 0;
+}
+
+.testimonials .card .content .imgBx{
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 4px solid #fff;
+	box-shadow: 0px 10px 20px  rgba(0,0,0,0.2);
+}
+
+.testimonials .card .content h2{
+	font-size: 18px;
+	color: #fff;
+}
+
+.testimonials .card .content h2 span{
+	color: #03a9f4;
+	font-size: 14px;
+	transition: 0.5s;
+}
+
+.testimonials .card:hover .content h2 span{
+	color: #fff;
+}
+
+</style>
+<body>
+	<div class="testimonials">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui laudantium, dolore, molestiae aspernatur inventore quisquam maxime quasi beatae rerum, ullam perferendis excepturi et dolorem praesentium dolor, assumenda labore veniam placeat.</p>
+
+							<div class="imgBx">
+								<img src="img_lights.jpg">
+							</div>
+
+							<div class="details">
+								<h2>Someone famous<br><span>Website Designer</span></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui laudantium, dolore, molestiae aspernatur inventore quisquam maxime quasi beatae rerum, ullam perferendis excepturi et dolorem praesentium dolor, assumenda labore veniam placeat.</p>
+
+							<div class="imgBx">
+								<img src="img_lights.jpg">
+							</div>
+
+							<div class="details">
+								<h2>Someone famous<br><span>Website Designer</span></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<div class="card">
+						<div class="layer"></div>
+						<div class="content">
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui laudantium, dolore, molestiae aspernatur inventore quisquam maxime quasi beatae rerum, ullam perferendis excepturi et dolorem praesentium dolor, assumenda labore veniam placeat.</p>
+
+							<div class="imgBx">
+								<img src="img_lights.jpg">
+							</div>
+
+							<div class="details">
+								<h2>Someone famous<br><span>Website Designer</span></h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	 var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 0,
+        modifier: 1,
+        slideShadows: true,
+      },
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+</script>
+</body>
+</html>
